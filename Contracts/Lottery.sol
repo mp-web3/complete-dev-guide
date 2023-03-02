@@ -17,6 +17,11 @@ contract Lottery {
     function random() public view returns (uint) { // set as public just for the sake of testing
         return uint(keccak256(block.difficulty, now, players)); //sha3 is a global variable, we pass in the sources of pseudom randomnes: block difficulty, current time and array of players 
     }
+
+    function pickWinner() public {
+        uint index = random() % players.length;
+        players[index].transfer(this.balance); //players.index is the address of the winner on which we can call the method transfer; this.balance is the total balance in the contract
+    }
 /*
     function pickWinner() public {
         winner_num = random() % players.length;
@@ -28,6 +33,6 @@ contract Lottery {
     }
 */
 
-    
+
 
 }
