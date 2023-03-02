@@ -12,4 +12,8 @@ contract Lottery {
         players.push(msg.sender); 
     } 
 
+    function random() public view returns (uint) { // set as public just for the sake of testing
+        return uint(keccak256(block.difficulty, now, players)); //sha3 is a global variable, we pass in the sources of pseudom randomnes: block difficulty, current time and array of players 
+    }
+
 }

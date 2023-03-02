@@ -20,6 +20,20 @@
 				"type": "function"
 			},
 			{
+				"constant": true,
+				"inputs": [],
+				"name": "random",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"constant": false,
 				"inputs": [],
 				"name": "enter",
@@ -74,9 +88,9 @@
 	},
 	"sources": {
 		"Contracts/Lottery.sol": {
-			"keccak256": "0x7d4644f6f78be2129e47b88db2e2a59e9f1b31adb38566aaeffa2d364e7f87e3",
+			"keccak256": "0x4262e04d3fa62025fcef156d49ebe5ca25e1feebc42e82578db854d361f3f9b7",
 			"urls": [
-				"bzzr://704775c0ebb727ae60b57fc696e65e30216e6b8028b1d73ecb910994c2d6303f"
+				"bzzr://57c89586668fad5cc65f9a857af540be8d17c8c42ba278ab8f4e64479a478504"
 			]
 		}
 	},
