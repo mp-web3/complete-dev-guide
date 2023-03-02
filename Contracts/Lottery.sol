@@ -21,18 +21,7 @@ contract Lottery {
     function pickWinner() public {
         uint index = random() % players.length;
         players[index].transfer(this.balance); //players.index is the address of the winner on which we can call the method transfer; this.balance is the total balance in the contract
+        players = new address[](0); //empty the list by creating a new array of type address with 0 elements
     }
-/*
-    function pickWinner() public {
-        winner_num = random() % players.length;
-        winner = address(winner_num);
-    }
-
-    function getWinner() public view returns (address) {
-        return winner;
-    }
-*/
-
-
 
 }
